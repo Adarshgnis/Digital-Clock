@@ -34,7 +34,14 @@ let liveTime = () => {
 setInterval(liveTime);
 
 const button = document.getElementById("btn");
-button.addEventListener("click", textDisplay);
+button.addEventListener("click", () => {
+    buttonFunctionality();
+});
+
+let buttonFunctionality = () => {
+    textDisplay();
+    changeDisplay();
+}
 
 // to display text from select option
 function textDisplay() {
@@ -44,8 +51,10 @@ function textDisplay() {
   document.getElementById("displayLunch").innerHTML = lunchValue;
   let napValue = document.getElementById("napValue").value;
   document.getElementById("displayNap").innerHTML = napValue;
-  changeDisplay();
+//   changeDisplay();
 }
+
+// text and image change
 
 let changeDisplay = () => {
   let dateTime = new Date();
@@ -67,13 +76,15 @@ let changeDisplay = () => {
   if (arr1[0] == hr && arr1[1] == zone.innerHTML) {
     console.log("if Morning");
     document.getElementById('changeMessage').innerText="Grab some Healthy BreakFast!!!";
+    document.getElementById('images').src = "assets/img_1.svg"
   }
   else if(arr2[0] == hr && arr2[1] == zone.innerHTML) {
     console.log("if Lunch");
     document.getElementById('changeMessage').innerText="Let's have some lunch";
-    document.getElementById('images').style.backgroundImage = "url('assets/lunch-img.svg')"
+    document.getElementById('images').src = "assets/lunch-img.svg"
   } else if(arr3[0] == hr && arr3[1] == zone.innerHTML) {
     console.log("if Nap");
     document.getElementById('changeMessage').innerText="Sleep is the best meditation!";
+    document.getElementById('images').src = "assets/dinner-img.svg";
   }
 };

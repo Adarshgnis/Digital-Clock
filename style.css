@@ -10,6 +10,8 @@ font-family: 'Manrope', sans-serif; */
 
 html, body {
     font-size: 62.5%;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -81,7 +83,7 @@ body {
 }
 
 .result {
-    background-color: rgb(255, 234, 7);
+    /* background-color: rgb(255, 234, 7); */
     grid-column: 2/3;
     grid-row: 10/12;
 }
@@ -270,4 +272,124 @@ body {
     letter-spacing: .1rem;
     line-height: 2.8rem;
     padding: 0 2rem;
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 10px;
+        
+    } 
+
+    .clock {
+        width: 100%;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .time {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .logo-box {
+        width: 100%;
+    }
+
+    .logo-box img {
+        width: 50%;
+        margin: 0px auto;
+        display: flex;
+    }
+
+    .time-one {
+        height: 11rem;
+    }
+    
+    .time-two {
+        top: 2px;
+    }
+    .time-three {
+        top: 20px;
+    }
+    
+    .time-one ul {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    .time-one ul li:first-child{
+        font-size: 1.7rem;
+    }
+    
+    .time-one ul li:nth-child(n+2){
+        font-size: 2.9rem;
+    }
+    
+    
+    
+    .time-one ul li span{
+        font-size: 1.9rem;
+    }
+    
+    .time-one ul li:last-child {
+        padding: 5px 15px 12px 15px;
+        color: #FFFFFF;
+    }
+    
+    .setAlarm {
+        background-color: #FFFFFF;
+        grid-column: 1;
+        grid-row: 4/8;
+        border-radius: 10px;
+    }
+
+    .setAlarm ul li h3 {
+        font-size: 1.5rem;
+    }
+
+    .setAlarm ul li img{
+        width: 7%;
+    }
+
+    .setAlarm ul li select {
+        height: 4rem;
+    }
+
+    #btn {
+        grid-column: 1;
+        grid-row: 8;
+        width: 50%;
+        margin: 0 auto;
+        font-size: 2rem;
+    }
+
+    .result {
+        grid-column: 1;
+        grid-row: 9;
+    }
+
+    .greet {
+        display: none;
+    }
+
+    .message {
+        grid-column: 1;
+        grid-row: 10;
+    }
+
+    .message h2 {
+        font-size: 1.6rem;
+        letter-spacing: .1rem;
+    }
+
+    .image {
+        grid-column: 1;
+        grid-row: 11;
+    }
+
 }
