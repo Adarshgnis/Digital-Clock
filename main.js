@@ -57,6 +57,7 @@ function textDisplay() {
 // text and image change
 
 let changeDisplay = () => {
+    // console.log("changedisplaywork")
   let dateTime = new Date();
   let hrs = dateTime.getHours();
   let min = dateTime.getMinutes();
@@ -66,6 +67,8 @@ let changeDisplay = () => {
 
   if (hrs > 12) {
     hrs -= 12;
+    hr = hrs;
+  } else {
     hr = hrs;
   }
 
@@ -82,9 +85,10 @@ let changeDisplay = () => {
     console.log("if Lunch");
     document.getElementById('changeMessage').innerText="Let's have some lunch";
     document.getElementById('images').src = "assets/lunch-img.svg"
-  } else if(arr3[0] == hr && arr3[1] == zone.innerHTML) {
+  } else if(arr3[0] == hr && arr3[1] == zone.innerHTML){
     console.log("if Nap");
     document.getElementById('changeMessage').innerText="Sleep is the best meditation!";
     document.getElementById('images').src = "assets/dinner-img.svg";
   }
 };
+
